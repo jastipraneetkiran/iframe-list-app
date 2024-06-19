@@ -1,0 +1,19 @@
+.ratings {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.rating {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.rating span {
+  display: block;
+  margin: 5px 0;
+}
+.rating span:first-child {
+  color: #f5c518;
+}
