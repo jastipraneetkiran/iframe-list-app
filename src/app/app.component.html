@@ -1,11 +1,11 @@
 <div class="container" >
-  <ng-container *ngIf="data">
+  <ng-container *ngIf="!isEmpty(data)">
     <app-movie-header [movie]="data"></app-movie-header>
-    <app-movie-poster [posterUrl]="data.Poster"></app-movie-poster>
+    <app-movie-poster [posterUrl]="data?.Poster"></app-movie-poster>
     <app-movie-details [movie]="data"></app-movie-details>
-    <app-movie-rating [ratings]="data.Ratings"></app-movie-rating>
+    <app-movie-rating [ratings]="data?.Ratings"></app-movie-rating>
   </ng-container>
-  <ng-container *ngIf="!data">
+  <ng-container *ngIf="isEmpty(data)">
     <p>Search Movie To Load...</p>
   </ng-container>
 </div>

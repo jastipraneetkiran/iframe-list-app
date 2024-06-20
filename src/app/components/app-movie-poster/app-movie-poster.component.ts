@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './app-movie-poster.component.css'
 })
 export class AppMoviePosterComponent {
-  @Input() posterUrl!: string;
+  @Input() posterUrl?: string;
 }

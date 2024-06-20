@@ -15,11 +15,15 @@ import { AppMovieRatingComponent } from './components/app-movie-rating/app-movie
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  data!: SelectionMovieData;
+  data?: SelectionMovieData;
 
   ngOnInit() {
     window.addEventListener('message', (event) => {
       this.data = event.data;
     });
+  }
+
+  isEmpty(obj: any ={}): boolean {
+    return Object.keys(obj).length === 0;
   }
 }
